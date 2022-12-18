@@ -40,4 +40,4 @@ let staticContentHandler root (header: string, response: StreamWriter) =
             response.Write(text)
     else
         response.Write("HTTP/1.1 404 Not Found \r\n\r\n" + resource + " not found.")
-startServer("127.0.0.1", 8080) (staticContentHandler @"./")
+startServer("127.0.0.1", 8080) (staticContentHandler @".")
